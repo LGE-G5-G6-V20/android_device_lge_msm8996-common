@@ -381,14 +381,6 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 -system/lib/libcir_driver.so:vendor/lib/libcir_driver.so
 -system/lib64/libcir_driver.so:vendor/lib64/libcir_driver.so
 
-# Keymaster - LG
-system/lib/hw/lgkm.default.so
-system/lib/hw/lgkm.msm8996.so
-system/lib/liblgkm.so
-system/lib64/hw/lgkm.default.so
-system/lib64/hw/lgkm.msm8996.so
-system/lib64/liblgkm.so
-
 # Keystore
 -vendor/lib/hw/keystore.msm8996.so
 -vendor/lib64/hw/keystore.msm8996.so
