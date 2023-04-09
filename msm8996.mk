@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@6.0 \
     android.hardware.audio.effect@6.0-impl \
-    android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
     audio.primary.msm8996 \
     audio.r_submix.default \
     audio.usb.default \
