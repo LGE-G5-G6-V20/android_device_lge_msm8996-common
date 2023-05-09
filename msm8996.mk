@@ -163,11 +163,6 @@ PRODUCT_COPY_FILES += \
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap
-
-# FM
-PRODUCT_PACKAGES += \
-    brcm-uim-sysfs \
-    libfmjni
     
 # Gatekeeper
 PRODUCT_PACKAGES += \
