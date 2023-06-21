@@ -90,7 +90,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
-    libgui_shim \
     libshim_camera \
     libui_shim \
     libtinyxml \
@@ -208,12 +207,9 @@ PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
+    android.hidl.manager-V1.0-java \
     libhidltransport \
     libhwbinder
-
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -250,6 +246,7 @@ PRODUCT_COPY_FILES += \
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
+    android.system.net.netd@1.0_vendor \
     libandroid_net \
     netutils-wrapper-1.0
 
@@ -260,7 +257,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.1-service \
     com.android.nfc_extras \
-    NfcNci \
     Tag
 
 PRODUCT_COPY_FILES += \
