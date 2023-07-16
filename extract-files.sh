@@ -23,20 +23,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    system/lib/lib-imscamera.so)
-        grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-        ;;
-    system/lib/lib-imsvideocodec.so)
-        grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
-        ;;
-    system/lib64/lib-imscamera.so)
-        grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
-        ;;
-    system/lib64/lib-imsvideocodec.so)
-        grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
-        ;;
-    system/lib64/lib-imsvt.so)
-        grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+    system/etc/permissions/qti_libpermissions.xml)
+        sed -i "s/name=\"android.hidl.manager-V1.0-java/name=\"android.hidl.manager@1.0-java/g" "${2}"
         ;;
     system_ext/etc/init/dpmd.rc)
         sed -i "s/\/system\/product\/bin\//\/system\/system_ext\/bin\//g" "${2}"
