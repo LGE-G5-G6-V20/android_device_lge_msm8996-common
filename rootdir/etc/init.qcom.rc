@@ -189,6 +189,12 @@ on boot
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
+    
+    # DAC control
+    chmod 0660 /sys/kernel/es9218_dac/avc_volume
+    chmod 0660 /sys/kernel/es9218_dac/ess_filter
+    chown system system /sys/kernel/es9218_dac/avc_volume
+    chown system system /sys/kernel/es9218_dac/ess_filter
 
     # Display and LED permissions
     chown system system /sys/class/leds/red/blink
