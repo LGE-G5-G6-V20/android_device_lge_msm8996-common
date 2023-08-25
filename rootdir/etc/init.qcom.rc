@@ -193,8 +193,14 @@ on boot
     # DAC control
     chmod 0660 /sys/kernel/es9218_dac/avc_volume
     chmod 0660 /sys/kernel/es9218_dac/ess_filter
+    chmod 0660 /sys/kernel/es9218_dac/left_volume
+    chmod 0660 /sys/kernel/es9218_dac/right_volume
+    chmod 0660 /sys/kernel/es9218_dac/ess_custom_filter
     chown system system /sys/kernel/es9218_dac/avc_volume
     chown system system /sys/kernel/es9218_dac/ess_filter
+    chown system system /sys/kernel/es9218_dac/left_volume
+    chown system system /sys/kernel/es9218_dac/right_volume
+    chown system system /sys/kernel/es9218_dac/ess_custom_filter
 
     # Display and LED permissions
     chown system system /sys/class/leds/red/blink
