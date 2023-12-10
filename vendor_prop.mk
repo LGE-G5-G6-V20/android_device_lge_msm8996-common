@@ -40,6 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    bluetooth.core.gap.le.privacy.enabled=false \
     bluetooth.device.class_of_device=90,2,12 \
     bluetooth.hardware.power.operating_voltage_mv=1800 \
     bluetooth.le.disable_apcf_extended_features=1 \
@@ -158,7 +159,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.renderengine.backend=threaded \
+    debug.renderengine.backend=skiaglthreaded \
     ro.opengles.version=196610
 
 # Perf
