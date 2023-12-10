@@ -120,6 +120,14 @@ on post-fs-data
     rm /data/system/perfd/default_values
     chmod 2770 /data/system/perfd
 
+# If the target device supports the es9218/es9218p dac, set up sysfs prop ownership
+on property:ro.audio.ess.supported=true
+    chown system system /sys/kernel/es9218_dac/avc_volume
+    chown system system /sys/kernel/es9218_dac/ess_custom_filter
+    chown system system /sys/kernel/es9218_dac/ess_filter
+    chown system system /sys/kernel/es9218_dac/left_volume
+    chown system system /sys/kernel/es9218_dac/right_volume
+
 # Start camera server as daemon
 service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
