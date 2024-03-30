@@ -149,6 +149,9 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm8996
 # Root directories
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist persist-lg sns mpt
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # SELinux policies
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
